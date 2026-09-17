@@ -1,0 +1,58 @@
+Q7.
+20
+10
+25
+<class 'int'>
+<class 'int'>
+<class 'str'>
+
+Q12. (Topic 2)
+3.4
+3
+2
+/ gives the exact division result with decimals, // gives only the whole number (floor) part, and % gives the remainder left after division.
+
+Q13.
+20
+Rewritten so addition happens first: result = (10 + 5) * 2
+
+Q14.
+10
+Rewritten with parentheses: result = 20 - (4 * 3) + 2
+
+Q15.
+8
+9
+100
+
+Q51.
+50
+50
+<class 'str'>
+<class 'int'>
+
+Q52.
+99.99
+99
+int() truncates the decimal part completely instead of rounding, so .99 is simply dropped.
+
+Q53.
+17
+7
+60
+2.4
+2
+2
+
+Q54.
+20
+30
+7.0
+2.5
+Parentheses force the operation inside them to be solved first, changing the order of calculation and the final result.
+
+Q55.
+4
+8
+6
+a = ones digit, c = tens digit, d = hundreds digit.

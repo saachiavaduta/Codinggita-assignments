@@ -1,0 +1,146 @@
+Q1.
+True
+False
+False
+True
+True
+False
+
+Q2.
+True
+False
+False
+True
+True
+
+Q3.
+True
+True
+False
+True
+
+Q4.
+True
+False
+True
+
+Q5.
+After x += 10 -> 30
+After x -= 5 -> 25
+After x *= 2 -> 50
+After x //= 5 -> 10
+Final value: 10
+
+Q7.
+True
+False
+False
+
+Q9.
+True
+False
+True
+False
+
+Q12.
+A -> 65
+a -> 97
+Z -> 90
+z -> 122
+0 -> 48
+9 -> 57
+@ -> 64
+
+Q13.
+65 -> A
+66 -> B
+97 -> a
+98 -> b
+48 -> 0
+57 -> 9
+64 -> @
+
+Q14.
+ord("a") is larger than ord("A")
+Difference between A and a = 32
+Difference between B and b = 32 (same)
+
+Q17.
+True
+True
+True
+True
+
+Q18.
+chr(9731) -> ☃
+chr(9829) -> ♥
+chr(8377) -> ₹
+
+Q19.
+P
+Y
+N
+O
+
+Q20.
+text[0] -> C
+text[3] -> P
+text[-1] -> R
+text[-3] -> T
+
+Q21.
+P
+T
+N
+O
+
+Q23.
+word[0] -> P
+word[2] -> O
+word[-1] -> M
+word[-4] -> G
+
+Q24.
+PYT
+THO
+YTHON
+
+Q25.
+PROG
+RAMMING
+PROGRAMMING
+
+Q26.
+PUTER
+COMPU
+MPUT
+
+Q27.
+PTO
+YHN
+NOHTYP
+
+Q31.
+CEG
+IGE
+JHFDB
+text[2:8:2]  -> start=2, stop=8, step=2
+text[8:2:-2] -> start=8, stop=2, step=-2
+text[::-2]   -> start=end, stop=beginning, step=-2
+
+Q33.
+['Python', 'is', 'easy']
+split() with no argument separates the string at whitespace.
+
+Q34.
+['apple', 'banana', 'mango']
+
+Q35.
+['Python is easy']
+No comma is present in the text, so nothing gets split and the whole string stays as one item.
+
+Q49.
+2026-09-09
+
+Q50.
+Hello Python
