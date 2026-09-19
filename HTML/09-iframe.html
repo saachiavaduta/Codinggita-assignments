@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Iframe Assignment</title>
+</head>
+<body>
+<!-- 1a, 1b & 1c -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Iframe Example</title>
+</head>
+<body>
+<iframe src="https://www.example.com" width="100%" height="400" title="Example Website" style="border:none;"></iframe>
+</body>
+</html>
+
+<!-- 2a, 2b & 2c -->
+<a href="https://www.example.com" target="displayFrame">Open Example Site</a>
+<iframe name="displayFrame" src="" width="100%" height="300" title="Display Frame"></iframe>
+
+<!-- 3a, 3b, 3c & 3d -->
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="560" height="315" allow="fullscreen; gyroscope" allowfullscreen title="YouTube Video"></iframe>
+
+<!-- 4a, 4b & 4c -->
+<style>
+.responsive-iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  margin: 10px;
+}
+</style>
+<iframe class="responsive-iframe" src="https://www.example.com" title="Responsive Example"></iframe>
+
+<!-- 5a, 5b & 5c -->
+<iframe src="https://www.example.com/map" width="800" height="450" allow="fullscreen" title="Map View"></iframe>
+
+<!-- 6a, 6b & 6c -->
+<iframe src="https://www.example.com/interactive" width="100%" height="500" allow="gyroscope" title="Interactive Content"></iframe>
+
+<!-- 7a, 7b & 7c -->
+<iframe src="https://device.example.com" width="600" height="400" allow="usb" title="Device Connection"></iframe>
+
+<!-- 8a, 8b & 8c -->
+<iframe src="https://www.example.com" width="700" height="450" allow="fullscreen; gyroscope; usb" title="Full Access Frame"></iframe>
+
+<!-- 9a, 9b, 9c & 9d -->
+<iframe src="https://www.example.com" width="48%" height="350" allow="fullscreen" title="Fullscreen Frame"></iframe>
+<iframe src="https://www.example.com" width="48%" height="350" allow="gyroscope" title="Gyroscope Frame"></iframe>
+
+<!-- 10a, 10b & 10c -->
+<a href="https://www.example1.com" target="navFrame">Site One</a>
+<a href="https://www.example2.com" target="navFrame">Site Two</a>
+<a href="https://www.example3.com" target="navFrame">Site Three</a>
+<iframe name="navFrame" src="" width="100%" height="400" title="Navigation Frame"></iframe>
+
+<!-- 11a, 11b & 11c -->
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="560" height="315" allow="fullscreen; gyroscope" allowfullscreen title="Video with Gyroscope"></iframe>
+
+<!-- 12a, 12b & 12c -->
+<iframe src="https://www.example.com" width="100%" height="300" title="Restricted Frame"></iframe>
+
+<!-- 13a, 13b & 13c -->
+<style>
+.aspect-ratio-box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.aspect-ratio-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+</style>
+<div class="aspect-ratio-box">
+  <iframe src="https://www.example.com" title="Aspect Ratio Frame"></iframe>
+</div>
+
+<!-- 14 -->
+<h1>Device Access Demo</h1>
+<p>This page demonstrates iframes with different permission levels.</p>
+<iframe src="https://device.example.com" width="600" height="300" allow="usb" title="USB Access Frame"></iframe>
+<iframe src="https://www.example.com" width="500" height="350" allow="fullscreen" title="Fullscreen Access Frame"></iframe>
+
+<!-- 15a, 15b & 15c -->
+<iframe src="https://www.example.com" width="100%" height="400" allow="fullscreen; gyroscope; usb" title="Complete Example Frame" style="border:none;"></iframe>
+
+<!-- 16a, 16b & 16c -->
+<iframe src="https://www.example.com/demo" width="560" height="315" allow="fullscreen; gyroscope" allowfullscreen title="Fullscreen Gyroscope Demo"></iframe>
+
+<!-- 17a, 17b & 17c -->
+<style>
+.device-frame {
+  width: 45%;
+  display: inline-block;
+}
+</style>
+<iframe class="device-frame" src="https://device.example.com" height="350" allow="usb" title="USB Device Frame"></iframe>
+<iframe class="device-frame" src="https://www.example.com" height="350" allow="gyroscope" title="Gyroscope Device Frame"></iframe>
+
+<!-- 18a, 18b & 18c -->
+<iframe src="https://www.example.com" width="100%" height="500" allow="fullscreen" title="Minimal Permission Frame"></iframe>
+
+<!-- 19a, 19b & 19c -->
+<iframe src="https://www.example.com" width="500" height="300" allow="fullscreen" title="With Fullscreen Permission"></iframe>
+<iframe src="https://www.example.com" width="500" height="300" title="Without Any Permission"></iframe>
+
+<!-- 20a, 20b & 20c -->
+<style>
+.styled-iframe {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  height: 420px;
+  width: 100%;
+}
+</style>
+<iframe class="styled-iframe" src="https://www.example.com" allow="gyroscope" title="Styled Gyroscope Frame"></iframe>
+
+<!-- 21a, 21b & 21c -->
+<a href="https://device.example.com" target="myDeviceFrame">Connect Device</a>
+<iframe name="myDeviceFrame" src="" allow="usb" title="Device Connection Frame"></iframe>
+
+<!-- 22a, 22b & 22c -->
+<iframe src="https://www.example.com" width="700" height="450" allow="fullscreen; usb" title="Fullscreen and USB Frame" style="border:none;"></iframe>
+
+<!-- 23a, 23b & 23c -->
+<style>
+.video-frame {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+</style>
+<iframe class="video-frame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" allow="fullscreen; gyroscope" allowfullscreen title="Responsive Video Player"></iframe>
+
+<!-- 24 -->
+<iframe src="https://www.example.com" width="400" height="300" allow="fullscreen" title="Fullscreen Only Frame"></iframe>
+<iframe src="https://www.example.com" width="500" height="350" allow="gyroscope" title="Gyroscope Only Frame"></iframe>
+<iframe src="https://device.example.com" width="600" height="400" allow="usb" title="USB Only Frame"></iframe>
+
+<!-- 25a, 25b & 25c -->
+<style>
+header {
+  height: 80px;
+}
+.full-height-iframe {
+  width: 100%;
+  height: calc(100vh - 80px);
+  border: none;
+}
+</style>
+<header>
+  <h1>Website Header</h1>
+</header>
+<iframe class="full-height-iframe" src="https://www.example.com" allow="fullscreen; gyroscope; usb" title="Full Height Frame"></iframe>
+
+<!-- 26 -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  allow="fullscreen"
+  title="Video"></iframe>
+
+<!-- 27 -->
+<a href="https://www.example1.com" target="linkFrame">Site One</a>
+<a href="https://www.example2.com" target="linkFrame">Site Two</a>
+<a href="https://www.example3.com" target="linkFrame">Site Three</a>
+<iframe name="linkFrame" src="" allow="fullscreen" title="Link Loaded Frame"></iframe>
+
+<!-- 28a, 28b & 28c -->
+<style>
+.card-frame-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.card-frame {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 10px;
+}
+</style>
+<div class="card-frame-wrapper">
+  <iframe class="card-frame" src="https://www.example.com" allow="gyroscope" title="Card Style Frame"></iframe>
+</div>
+
+<!-- 29 -->
+<iframe src="https://www.example.com" width="400" height="300" allow="fullscreen" title="Version A Frame"></iframe>
+<iframe src="https://www.example.com" width="400" height="300" allow="fullscreen; gyroscope; usb" title="Version B Frame"></iframe>
+
+<!-- 30a, 30b, 30c, 30d & 30e -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Best Practice Iframe Usage</title>
+</head>
+<body>
+
+<!-- No special permissions needed for a normal webpage -->
+<iframe src="https://www.example.com" width="100%" height="300" title="Standard Webpage Frame" style="border:none;"></iframe>
+
+<!-- Fullscreen and gyroscope needed for interactive video/demo content -->
+<iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" width="560" height="315" allow="fullscreen; gyroscope" allowfullscreen title="Interactive Media Frame" style="border:none;"></iframe>
+
+<!-- USB access needed for device-related content -->
+<iframe src="https://device.example.com" width="600" height="400" allow="usb" title="Device Access Frame" style="border:none;"></iframe>
+
+</body>
+</html>
+
+
+</body>
+</html>
