@@ -1,0 +1,28 @@
+Q71.
+Pass
+The condition marks >= 40 is checked first and becomes True immediately, so the program prints "Pass" and never reaches the elif that checks marks >= 75.
+
+Q72.
+95 -> A
+85 -> B
+50 -> Pass
+30 -> Fail
+Because the conditions are now arranged from the highest value to the lowest, each mark is tested against the correct range before a lower, less strict condition can catch it.
+
+Q73.
+age=20, has_id=True  -> Entry Allowed
+age=20, has_id=False -> ID Required
+age=16, has_id=True  -> Underage
+
+Q74.
+1 -> Add
+3 -> Delete
+5 -> Invalid Choice
+case _ acts as the default case, matching any value that did not match the earlier cases.
+
+Q75.
+82 80 -> Grade B
+92 80 -> Grade A
+55 80 -> Pass
+92 60 -> Not Eligible
+Attendance is checked first because a student must be eligible by attendance before their marks are even considered for grading.
