@@ -1,0 +1,657 @@
+{
+  let class1 = 15000;
+  let class2 = 12500;
+  let total = class1 + class2;
+  console.log(total);
+}
+
+{
+  let morningPages = 18;
+  let eveningPages = 25;
+  console.log(morningPages + eveningPages);
+}
+
+{
+  let monday = 125;
+  let tuesday = 178;
+  console.log(monday + tuesday);
+}
+
+{
+  let a = "10";
+  let b = 5;
+  console.log(a + b);
+}
+
+{
+  let x = 5;
+  let y = "3";
+  console.log(x + y);
+}
+
+{
+  console.log(15 + 27);
+}
+
+{
+  let bookPrice = 350;
+  let penPrice = 45;
+  console.log(bookPrice + penPrice);
+}
+
+{
+  console.log("25" + 10);
+}
+
+{
+  let wallet = 2000;
+  let item1 = 750;
+  let item2 = 320;
+  let totalSpent = item1 + item2;
+  console.log(totalSpent);
+  console.log(wallet - totalSpent);
+}
+
+{
+  console.log(5 + "5" + 5);
+  console.log(5 + 5 + "5");
+  console.log("5" + 5 + 5);
+}
+
+{
+  let totalSeats = 80;
+  let occupied = 53;
+  console.log(totalSeats - occupied);
+}
+
+{
+  let marks = 500;
+  let lost = 35;
+  console.log(marks - lost);
+}
+
+{
+  let boxes = 2500;
+  let sent = 875;
+  console.log(boxes - sent);
+}
+
+{
+  let a = "10";
+  let b = 3;
+  console.log(a - b);
+}
+
+{
+  let x = "20";
+  let y = "5";
+  console.log(x - y);
+}
+
+{
+  console.log(100 - 37);
+}
+
+{
+  let water = 500;
+  let used = 175;
+  console.log(water - used);
+}
+
+{
+  console.log("50" - 20);
+  console.log("50" - "20");
+}
+
+{
+  let apples = 240;
+  let soldMorning = 95;
+  let soldEvening = 67;
+  console.log(apples - soldMorning - soldEvening);
+}
+
+{
+  console.log("100" - 50);
+  console.log("abc" - 10);
+  console.log(10 - "5" - "2");
+  console.log("10" - "5" - "2");
+}
+
+{
+  let notebookPrice = 45;
+  let notebooks = 8;
+  console.log(notebookPrice * notebooks);
+}
+
+{
+  let bottlesPerHour = 120;
+  let hours = 6;
+  console.log(bottlesPerHour * hours);
+}
+
+{
+  let rows = 7;
+  let plantsPerRow = 15;
+  console.log(rows * plantsPerRow);
+}
+
+{
+  let a = "5";
+  let b = 4;
+  console.log(a * b);
+}
+
+{
+  let x = "10";
+  let y = "2";
+  console.log(x * y);
+}
+
+{
+  console.log(12 * 8);
+}
+
+{
+  let pizzaPrice = 299;
+  let pizzas = 4;
+  console.log(pizzaPrice * pizzas);
+}
+
+{
+  console.log("7" * 6);
+  console.log("7" * "6");
+}
+
+{
+  let unitsPerHour = 45;
+  let hours = 8;
+  console.log(unitsPerHour * hours);
+}
+
+{
+  console.log("5" * 3 * "2");
+  console.log("abc" * 4);
+  console.log(10 * "2.5");
+  console.log("10" * "2.5" * "0");
+}
+
+{
+  let pencils = 144;
+  let students = 12;
+  console.log(pencils / students);
+}
+
+{
+  let distance = 360;
+  let time = 6;
+  console.log(distance / time);
+}
+
+{
+  let amount = 72000;
+  let departments = 9;
+  console.log(amount / departments);
+}
+
+{
+  let a = "20";
+  let b = 4;
+  console.log(a / b);
+}
+
+{
+  let x = "100";
+  let y = "5";
+  console.log(x / y);
+}
+
+{
+  console.log(144 / 12);
+}
+
+{
+  let totalStudents = 360;
+  let classrooms = 9;
+  console.log(totalStudents / classrooms);
+}
+
+{
+  console.log("100" / 4);
+  console.log("100" / "4");
+}
+
+{
+  let totalBill = 2400;
+  let friends = 6;
+  console.log(totalBill / friends);
+}
+
+{
+  console.log(10 / 0);
+  console.log(-10 / 0);
+  console.log(0 / 0);
+  console.log("20" / "4" / 2);
+  console.log("abc" / 5);
+}
+
+{
+  let students = 53;
+  let groupSize = 5;
+  console.log(students % groupSize);
+}
+
+{
+  let candies = 128;
+  let boxCapacity = 10;
+  console.log(candies % boxCapacity);
+}
+
+{
+  let toys = 237;
+  let boxSize = 6;
+  console.log(toys % boxSize);
+}
+
+{
+  let waiting = 185;
+  let busCapacity = 40;
+  console.log(waiting % busCapacity);
+}
+
+{
+  console.log(10 % 0);
+}
+
+{
+  console.log(29 % 5);
+}
+
+{
+  let chocolates = 23;
+  let boxCapacity = 4;
+  console.log(chocolates % boxCapacity);
+}
+
+{
+  console.log(0 % 7);
+  console.log(15 % 0);
+}
+
+{
+  let pages = 47;
+  let sheetCapacity = 6;
+  console.log(Math.floor(pages / sheetCapacity));
+  console.log(pages % sheetCapacity);
+}
+
+{
+  console.log(17 % 5);
+  console.log(-17 % 5);
+  console.log(17 % -5);
+  console.log(-17 % -5);
+  console.log(10 % 0);
+}
+
+{
+  let side = 6;
+  console.log(side ** 3);
+}
+
+{
+  let side = 9;
+  console.log(side ** 2);
+}
+
+{
+  console.log(5 ** 4);
+}
+
+{
+  let pixels = 1024;
+  console.log(pixels ** 2);
+}
+
+{
+  let base = 2;
+  let power = -1;
+  console.log(base ** power);
+}
+
+{
+  console.log(3 ** 4);
+}
+
+{
+  let side = 9;
+  console.log(side ** 2);
+}
+
+{
+  console.log(2 ** 5);
+  console.log(5 ** 2);
+}
+
+{
+  console.log(2 ** 3 ** 2);
+  console.log((2 ** 3) ** 2);
+  console.log(2 ** -3);
+  console.log((-2) ** 2);
+  console.log(4 ** 0.5);
+}
+
+{
+  let a = 10;
+  let b = 0;
+  console.log(a ** b);
+}
+
+{
+  let studentName = "Priya";
+  let marks = 92;
+  console.log(studentName, marks);
+}
+
+{
+  let score = 0;
+  console.log(score);
+}
+
+{
+  let a, b, c;
+  a = b = c = 50;
+  console.log(a, b, c);
+}
+
+{
+  let x;
+  x = 100;
+  console.log(x);
+}
+
+{
+  let p = 15;
+  let q = p;
+  q = 30;
+  console.log(p, q);
+}
+
+{
+  let score = 80;
+  score += 25;
+  console.log(score);
+}
+
+{
+  let balance = 1500;
+  balance += 120;
+  console.log(balance);
+}
+
+{
+  let count = 10;
+  count += 5;
+  console.log(count);
+}
+
+{
+  let msg = "Good";
+  msg += " Morning";
+  console.log(msg);
+}
+
+{
+  let n = 20;
+  n += "5";
+  console.log(n);
+}
+
+{
+  let health = 100;
+  health -= 35;
+  console.log(health);
+}
+
+{
+  let stock = 300;
+  stock -= 45;
+  console.log(stock);
+}
+
+{
+  let lives = 5;
+  lives -= 2;
+  console.log(lives);
+}
+
+{
+  let num = "40";
+  num -= 15;
+  console.log(num);
+}
+
+{
+  let x = "abc";
+  x -= 5;
+  console.log(x);
+}
+
+{
+  let price = 500;
+  price *= 1.18;
+  console.log(price);
+}
+
+{
+  let quantity = 8;
+  quantity *= 3;
+  console.log(quantity);
+}
+
+{
+  let amount = 200;
+  amount *= 1.1;
+  console.log(amount);
+}
+
+{
+  let val = "7";
+  val *= 3;
+  console.log(val);
+}
+
+{
+  let y = "hello";
+  y *= 2;
+  console.log(y);
+}
+
+{
+  let chocolates = 180;
+  chocolates /= 6;
+  console.log(chocolates);
+}
+
+{
+  let speed = 300;
+  speed /= 5;
+  console.log(speed);
+}
+
+{
+  let total = 400;
+  total /= 8;
+  console.log(total);
+}
+
+{
+  let num = "100";
+  num /= 4;
+  console.log(num);
+}
+
+{
+  let z = 50;
+  z /= 0;
+  console.log(z);
+}
+
+{
+  let number = 47;
+  number %= 6;
+  console.log(number);
+}
+
+{
+  let counter = 23;
+  counter %= 12;
+  console.log(counter);
+}
+
+{
+  let num = 29;
+  num %= 5;
+  console.log(num);
+}
+
+{
+  let x = "17";
+  x %= 3;
+  console.log(x);
+}
+
+{
+  let m = 15;
+  m %= 0;
+  console.log(m);
+}
+
+{
+  let side = 5;
+  side **= 3;
+  console.log(side);
+}
+
+{
+  let num = 4;
+  num **= 2;
+  console.log(num);
+}
+
+{
+  let base = 2;
+  base **= 5;
+  console.log(base);
+}
+
+{
+  let n = 4;
+  n **= 0.5;
+  console.log(n);
+}
+
+{
+  let p = 2;
+  p **= -1;
+  console.log(p);
+}
+
+{
+  let str = "25";
+  let num = 25;
+  console.log(str == num);
+}
+
+{
+  console.log(0 == false);
+}
+
+{
+  console.log(10 == "10");
+  console.log(null == undefined);
+}
+
+{
+  console.log("" == 0);
+  console.log([] == false);
+}
+
+{
+  console.log(NaN == NaN);
+}
+
+{
+  console.log("18" != 18);
+}
+
+{
+  let storedPassword = "1234";
+  let enteredPassword = 1234;
+  console.log(storedPassword != enteredPassword);
+}
+
+{
+  console.log(5 != "5");
+  console.log(0 != false);
+}
+
+{
+  console.log(null != undefined);
+  console.log("" != 0);
+}
+
+{
+  console.log(NaN != NaN);
+}
+
+{
+  console.log("25" === 25);
+}
+
+{
+  console.log(0 === false);
+  console.log(null === undefined);
+}
+
+{
+  console.log(10 === "10");
+  console.log(true === 1);
+}
+
+{
+  console.log("" === 0);
+  console.log([] === false);
+}
+
+{
+  console.log(0 == false);
+  console.log(0 === false);
+}
+
+{
+  console.log("18" !== 18);
+}
+
+{
+  console.log(0 !== false);
+  console.log(null !== undefined);
+}
+
+{
+  console.log(5 !== "5");
+  console.log(true !== 1);
+}
+
+{
+  console.log("" !== 0);
+  console.log(NaN !== NaN);
+}
+
+{
+  let input = "5";
+
+  if (input !== "0") {
+    console.log("Input is not 0");
+  }
+
+  console.log(input !== "0");
+}

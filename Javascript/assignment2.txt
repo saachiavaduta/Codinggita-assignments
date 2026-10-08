@@ -1,0 +1,404 @@
+{
+  let name = "Vikas";
+  let age = 20;
+  let city = "Ahmedabad";
+
+  console.log(name);
+  console.log(age);
+  console.log(city);
+}
+
+{
+  let score = 50;
+  score = 80;
+  console.log(score);
+}
+
+{
+  const PI = 3.14;
+  console.log(PI);
+}
+
+{
+  var num1;
+  let num2;
+
+  console.log(num1);
+  console.log(num2);
+
+  num1 = 10;
+  num2 = 20;
+
+  console.log(num1);
+  console.log(num2);
+}
+
+{
+  const studentName = "Riya";
+  let marks = 75;
+  const schoolName = "ABC School";
+
+  marks = 85;
+
+  console.log(studentName);
+  console.log(marks);
+  console.log(schoolName);
+}
+
+{
+  if (true) {
+    var scopeVar = 10;
+    let scopeLet = 20;
+    const scopeConst = 30;
+  }
+
+  console.log(scopeVar);
+}
+
+{
+  var user = "Amit";
+  var user = "Rahul";
+  console.log(user);
+
+  let user2 = "Amit";
+  console.log(user2);
+}
+
+{
+  var varValue = 1;
+  let letValue = 2;
+  const constValue = 3;
+
+  varValue = 10;
+  letValue = 20;
+
+  console.log(varValue, letValue, constValue);
+}
+
+function question9() {
+  var x = 10;
+
+  if (true) {
+    var x = 20;
+    let y = 30;
+    const z = 40;
+  }
+
+  console.log(x);
+}
+
+question9();
+
+{
+  const name = "Vikas";
+
+  let age = 20;
+  age = 25;
+
+  if (true) {
+    var city = "Delhi";
+    let country = "India";
+    console.log(country);
+  }
+
+  console.log(city);
+
+  let score = 50;
+  score = 80;
+
+  console.log(name, age, score);
+}
+
+function question11() {
+  console.log(a);
+
+  var a = 10;
+  let b = 20;
+  const c = 30;
+}
+
+question11();
+
+function question12() {
+  var x = "Hello";
+  let y = "World";
+  const z = "!";
+
+  console.log(x);
+  console.log(y);
+  console.log(z);
+  console.log(x + " " + y + z);
+}
+
+question12();
+
+{
+  let wholeNumber = 25;
+  let decimalNumber = 3.14;
+  let text = "JavaScript";
+  let isTrue = true;
+
+  console.log(wholeNumber, typeof wholeNumber);
+  console.log(decimalNumber, typeof decimalNumber);
+  console.log(text, typeof text);
+  console.log(isTrue, typeof isTrue);
+}
+
+{
+  let a;
+  let b = null;
+
+  console.log(a, typeof a);
+  console.log(b, typeof b);
+}
+
+{
+  let positiveInfinity = Infinity;
+  let negativeInfinity = -Infinity;
+  let notANumber = NaN;
+  let scientific = 2.5e3;
+  let readable = 1_000_000;
+
+  console.log(positiveInfinity, typeof positiveInfinity);
+  console.log(negativeInfinity, typeof negativeInfinity);
+  console.log(notANumber, typeof notANumber);
+  console.log(scientific, typeof scientific);
+  console.log(readable, typeof readable);
+}
+
+{
+  let singleQuote = 'Hello';
+  let doubleQuote = "World";
+  let userName = "Vikas";
+  let templateString = `Welcome ${userName}`;
+
+  console.log(singleQuote);
+  console.log(doubleQuote);
+  console.log(templateString);
+}
+
+{
+  let sym1 = Symbol("id");
+  let sym2 = Symbol("id");
+
+  console.log(sym1 === sym2);
+
+  let obj = {
+    [sym1]: "First value",
+    [sym2]: "Second value"
+  };
+
+  console.log(obj[sym1]);
+  console.log(obj[sym2]);
+}
+
+{
+  let num = Number.MAX_SAFE_INTEGER;
+
+  console.log(num + 1);
+  console.log(num + 2);
+  console.log(num + 3);
+
+  let big = 9007199254740991n;
+
+  console.log(big + 1n);
+  console.log(big + 2n);
+  console.log(big + 3n);
+}
+
+{
+  let uniqueId = Symbol("id");
+  let bigValue = 9007199254740991n;
+  let notGiven;
+  let emptyValue = null;
+
+  console.log(typeof uniqueId, typeof bigValue, typeof notGiven, typeof emptyValue);
+}
+
+{
+  let a;
+  let b = null;
+  let c = 42;
+  let d = "Hello";
+  let e = true;
+  let f = Symbol("key");
+  let g = 123n;
+
+  console.log(typeof a, a);
+  console.log(typeof b, b);
+  console.log(typeof c, c);
+  console.log(typeof d, d);
+  console.log(typeof e, e);
+  console.log(typeof f, f);
+  console.log(typeof g, g);
+}
+
+{
+  let num = 10;
+  let text = "Hello";
+  let flag = true;
+  let empty;
+  let nothing = null;
+  let unique = Symbol("id");
+  let big = 9007199254740991n;
+
+  console.log(num, text, flag, empty, nothing, unique, big);
+}
+
+{
+  let age = 20;
+  let student = {
+    name: "Riya",
+    age: 18
+  };
+
+  console.log(age, student);
+}
+
+{
+  let student = {
+    name: "Riya",
+    age: 18,
+    isEnrolled: true
+  };
+
+  console.log(student);
+  console.log(student.name);
+  console.log(student.age);
+  console.log(student.isEnrolled);
+}
+
+{
+  let scores = [85, 92, 78, 90];
+  let mixedData = [10, "Hello", true, null];
+
+  console.log(scores);
+  console.log(mixedData);
+  console.log(scores[0]);
+  console.log(scores[scores.length - 1]);
+}
+
+{
+  function calculateArea(length, width) {
+    return length * width;
+  }
+
+  console.log(calculateArea(5, 4));
+  console.log(calculateArea(10, 3));
+}
+
+{
+  let num = 10;
+  let str = "Hello";
+  let bool = true;
+  let nothing = null;
+  let obj = { name: "Riya" };
+  let arr = [1, 2, 3];
+
+  function sayHi() {
+    return "Hi!";
+  }
+
+  console.log(num, typeof num);
+  console.log(str, typeof str);
+  console.log(bool, typeof bool);
+  console.log(nothing, typeof nothing);
+  console.log(obj, typeof obj);
+  console.log(arr, typeof arr);
+  console.log(sayHi, typeof sayHi);
+}
+
+{
+  let userName = "Amit";
+  let _privateData = 1;
+  let $price = 99;
+  let totalCount = 5;
+
+  console.log(userName, _privateData, $price, totalCount);
+}
+
+{
+  const length = 10;
+  const width = 5;
+  const area = length * width;
+  const MAX_LIMIT = 100;
+
+  console.log(length, width, area, MAX_LIMIT);
+}
+
+{
+  let city;
+  city = "Delhi";
+
+  let age = 20;
+  const PI = 3.14;
+
+  console.log(city);
+  console.log(age);
+  console.log(PI);
+}
+
+{
+  let person = {
+    name: "Amit",
+    age: 22
+  };
+
+  let colors = ["red", "green", "blue"];
+
+  function sayHi() {
+    return "Hi!";
+  }
+
+  let empty = null;
+
+  console.log(typeof person);
+  console.log(typeof colors);
+  console.log(typeof sayHi);
+  console.log(typeof empty);
+  console.log(person.name);
+  console.log(colors[1]);
+  console.log(sayHi());
+}
+
+{
+  let student1 = {
+    name: "Neha",
+    age: 19
+  };
+
+  let scores = [90, 85, 88];
+
+  function greet(name) {
+    return "Hello " + name;
+  }
+
+  let maxScore = 100;
+  maxScore = 95;
+
+  console.log(student1.name);
+  console.log(scores[0]);
+  console.log(greet("Neha"));
+  console.log(maxScore);
+}
+
+{
+  let personObj = {
+    name: "Amit"
+  };
+
+  let colorsArr = ["red", "green"];
+
+  console.log(personObj.name);
+  console.log(colorsArr[0]);
+  console.log(typeof null);
+
+  let marks = [85, 92, 78, 90];
+  console.log(marks);
+
+  const PI = 3.14;
+  let score = 50;
+  score = 80;
+
+  console.log(PI, score);
+}
