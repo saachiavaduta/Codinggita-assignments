@@ -657,3 +657,250 @@ Assignment 3
 
   console.log(input !== "0");
 }
+
+{
+ let marks = 78;
+ let passingMarks = 40;
+ let isPass = marks > passingMarks;
+ console.log("Scored more than passing marks?", isPass);
+}
+{
+ let today = 35;
+ let yesterday = 28;
+ let isHotter = today > yesterday;
+ console.log("Is today hotter?", isHotter);
+}
+{
+ console.log(15 > 10);
+ console.log(10 > 15);
+ console.log(10 > 10);
+}
+{
+ console.log("20" > 15);
+ console.log("5" > "10");
+ console.log("abc" > 10);
+}
+{
+ console.log(null > 0);
+ console.log(undefined > 0);
+}
+{
+ let stock = 120;
+ let wanted = 85;
+ console.log("Is stock sufficient?", stock > wanted);
+}
+{
+ console.log(true > false);
+ console.log("10" > "2");
+ console.log(NaN > 5);
+}
+{
+ let maxWeight = 50;
+ let currentWeight = 42;
+ let canAddMore = currentWeight < maxWeight;
+ console.log("Can more items be added?", canAddMore);
+}
+{
+ let age = 16;
+ let minimumAge = 18;
+ let isUnderage = age < minimumAge;
+ console.log("Is the person underage?", isUnderage);
+}
+{
+ console.log(8 < 12);
+ console.log(20 < 10);
+ console.log(7 < 7);
+}
+{
+ console.log("8" < 10);
+ console.log("20" < "3");
+ console.log("hello" < 5);
+}
+{
+ console.log(null < 0);
+ console.log(undefined < 0);
+}
+{
+ let capacity = 500;
+ let waterLevel = 375;
+ console.log("Is the tank not full?", waterLevel < capacity);
+}
+{
+ console.log(false < true);
+ console.log("5" < "15");
+ console.log(NaN < 10);
+}
+{
+ let marks = 75;
+ let distinctionMarks = 75;
+ console.log("Gets distinction?", marks >= distinctionMarks);
+}
+{
+ let ticketPrice = 300;
+ let money = 300;
+ console.log("Can buy the ticket?", money >= ticketPrice);
+}
+{
+ console.log(25 >= 25);
+ console.log(30 >= 25);
+ console.log(20 >= 25);
+}
+{
+ console.log("25" >= 25);
+ console.log("10" >= "2");
+ console.log(null >= 0);
+}
+{
+ console.log(undefined >= 0);
+}
+{
+ let maxPeople = 8;
+ let peopleInside = 8;
+ console.log("Is the lift full or overloaded?", peopleInside >= maxPeople);
+}
+{
+ console.log(true >= 1);
+ console.log("" >= 0);
+ console.log(NaN >= NaN);
+}
+{
+ let speedLimit = 60;
+ let speed = 60;
+ console.log("Within the limit?", speed <= speedLimit);
+}
+{
+ let passMarks = 40;
+ let scored = 39;
+ let hasFailed = scored < passMarks;
+ console.log("Has he failed?", hasFailed);
+}
+{
+ console.log(15 <= 20);
+ console.log(20 <= 15);
+ console.log(15 <= 15);
+}
+{
+ console.log("15" <= 20);
+ console.log("30" <= "5");
+ console.log(null <= 0);
+}
+{
+ console.log(undefined <= 0);
+}
+{
+ let maxBooks = 10;
+ let books = 10;
+ console.log("Books within limit?", books <= maxBooks);
+ console.log("Can more books be added?", books < maxBooks);
+}
+{
+ console.log(false <= 0);
+ console.log("" <= 0);
+ console.log(NaN <= 5);
+}
+{
+ let age = 18;
+ let votingAge = 18;
+ console.log("age >= votingAge:", age >= votingAge);
+ let temperature = 32;
+ console.log("temperature < 35:", temperature < 35);
+ let score = 90;
+ console.log("score > 85:", score > 85);
+}
+{
+ console.log(10 > 5 && 5 < 10);
+ console.log("10" >= 10);
+ console.log(null <= undefined);
+ console.log("5" < "10" && 5 > 2);
+}
+{
+ let price = 499;
+ let money = 500;
+ let canBuy = money >= price;
+ let changeLeft = money > price;
+ console.log("Can the customer buy it?", canBuy);
+ console.log("Will any change be left?", changeLeft);
+ console.log("Change =", money - price);
+}
+{
+ console.log("10" > "2");
+ console.log(10 > 2);
+}
+{
+ let counter = 5;
+ counter++;
+ console.log("counter =", counter);
+}
+{
+ let lives = 3;
+ lives--;
+ console.log("remaining lives =", lives);
+}
+{
+ let score = 10;
+ score++;
+ console.log("score =", score);
+}
+{
+ let items = 8;
+ items--;
+ console.log("items =", items);
+}
+{
+ let count = 0;
+ count++;
+ count++;
+ console.log("count =", count);
+}
+{
+ let x = 5;
+ let y = x++;
+ console.log("x =", x, "y =", y);
+}
+{
+ let a = 5;
+ let b = ++a;
+ console.log("a =", a, "b =", b);
+}
+{
+ let lives = 3;
+ let previousLives = lives--;
+ console.log("lives =", lives, "previousLives =", previousLives);
+}
+{
+ let attempts = 0;
+ let currentAttempts = ++attempts;
+ console.log("attempts =", attempts, "currentAttempts =", currentAttempts);
+}
+{
+ let points = 100;
+ points++;
+ points--;
+ console.log("points =", points);
+}
+{
+ let x = 10;
+ let y = x++;
+ let z = ++x;
+ console.log(x, y, z);
+}
+{
+ let a = 5;
+ let b = a-- + ++a;
+ console.log(a, b);
+}
+{
+ let m = 7;
+ let n = --m + m++;
+ console.log(m, n);
+}
+{
+ let p = 3;
+ let q = p++ + ++p + p;
+ console.log(p, q);
+}
+{
+ let val = 0;
+ val = val++ + ++val;
+ console.log(val);
+}
