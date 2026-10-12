@@ -1,0 +1,33 @@
+Q1.
+2
+5
+8
+11
+14
+
+Q2.
+15
+12
+9
+6
+3
+
+Q3.
+The loop executes 6 times.
+Values of i: 4, 9, 14, 19, 24, 29
+
+Q59.
+2
+6
+12
+20
+30
+
+Q60.
+5
+The loop checks each number from 1 to 10, and count increases only when i is even. There are 5 even numbers (2, 4, 6, 8, 10), so count becomes 5.
+
+Q61.
+Mistake: sum = i replaces the value of sum in every iteration instead of adding to it, so the final value is only the last number (5).
+In every iteration, the current number should be added to the accumulator (sum = sum + i).
+The corrected program is in level7_tricky.py.
