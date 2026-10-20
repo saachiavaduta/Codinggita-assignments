@@ -1,81 +1,103 @@
-Assignment 2
-{
-  let name = "Vikas";
-  let age = 20;
-  let city = "Ahmedabad";
+A]
 
-  console.log(name);
-  console.log(age);
-  console.log(city);
+1)
+let name = "Vikas";
+let age = 20;
+let city = "Ahmedabad";
+
+console.log(name);
+console.log(age);
+console.log(city);
+Output:
+Vikas
+20
+Ahmedabad
+
+2)
+let score = 50;
+score = 80;
+console.log(score);
+Output:
+80
+
+3)
+const PI = 3.14;
+console.log(PI);
+Output:
+3.14
+
+4)
+var num1;
+let num2;
+
+console.log(num1);
+console.log(num2);
+
+num1 = 10;
+num2 = 20;
+
+console.log(num1);
+console.log(num2);
+Output:
+undefined
+undefined
+10
+20
+
+B]
+
+5)
+const studentName = "Vikas";
+let marks = 75;
+const schoolName = "ABC School";
+
+marks = 85;
+
+console.log(studentName);
+console.log(marks);
+console.log(schoolName);
+Output:
+Vikas
+85
+ABC School
+
+6)
+if (true) {
+  var scopeVar = 10;
+  let scopeLet = 20;
+  const scopeConst = 30;
 }
 
-{
-  let score = 50;
-  score = 80;
-  console.log(score);
-}
+console.log(scopeVar);
+Output:
+10
 
-{
-  const PI = 3.14;
-  console.log(PI);
-}
+7)
+var user = "Vikas";
+var user = "Rahul";
+console.log(user);
 
-{
-  var num1;
-  let num2;
+let user2 = "Vikas";
+console.log(user2);
+Output:
+Rahul
+Vikas
 
-  console.log(num1);
-  console.log(num2);
+8)
+var varValue = 1;
+let letValue = 2;
+const constValue = 3;
 
-  num1 = 10;
-  num2 = 20;
+varValue = 10;
+letValue = 20;
 
-  console.log(num1);
-  console.log(num2);
-}
+console.log(varValue, letValue, constValue);
+Output:
+10 20 3
 
-{
-  const studentName = "Riya";
-  let marks = 75;
-  const schoolName = "ABC School";
+C]
 
-  marks = 85;
-
-  console.log(studentName);
-  console.log(marks);
-  console.log(schoolName);
-}
-
-{
-  if (true) {
-    var scopeVar = 10;
-    let scopeLet = 20;
-    const scopeConst = 30;
-  }
-
-  console.log(scopeVar);
-}
-
-{
-  var user = "Amit";
-  var user = "Rahul";
-  console.log(user);
-
-  let user2 = "Amit";
-  console.log(user2);
-}
-
-{
-  var varValue = 1;
-  let letValue = 2;
-  const constValue = 3;
-
-  varValue = 10;
-  letValue = 20;
-
-  console.log(varValue, letValue, constValue);
-}
-
+9)
 function question9() {
   var x = 10;
 
@@ -89,27 +111,35 @@ function question9() {
 }
 
 question9();
+Output:
+20
 
-{
-  const name = "Vikas";
+10)
+const name = "Vikas";
 
-  let age = 20;
-  age = 25;
+let age = 20;
+age = 25;
 
-  if (true) {
-    var city = "Delhi";
-    let country = "India";
-    console.log(country);
-  }
-
-  console.log(city);
-
-  let score = 50;
-  score = 80;
-
-  console.log(name, age, score);
+if (true) {
+  var city = "Delhi";
+  let country = "India";
+  console.log(country);
 }
 
+console.log(city);
+
+let score = 50;
+score = 80;
+
+console.log(name, age, score);
+Output:
+India
+Delhi
+Vikas 25 80
+
+D]
+
+11)
 function question11() {
   console.log(a);
 
@@ -119,7 +149,10 @@ function question11() {
 }
 
 question11();
+Output:
+undefined
 
+12)
 function question12() {
   var x = "Hello";
   let y = "World";
@@ -132,274 +165,374 @@ function question12() {
 }
 
 question12();
+Output:
+Hello
+World
+!
+Hello World!
 
-{
-  let wholeNumber = 25;
-  let decimalNumber = 3.14;
-  let text = "JavaScript";
-  let isTrue = true;
+E]
 
-  console.log(wholeNumber, typeof wholeNumber);
-  console.log(decimalNumber, typeof decimalNumber);
-  console.log(text, typeof text);
-  console.log(isTrue, typeof isTrue);
+1)
+let wholeNumber = 25;
+let decimalNumber = 3.14;
+let text = "JavaScript";
+let isTrue = true;
+
+console.log(wholeNumber, typeof wholeNumber);
+console.log(decimalNumber, typeof decimalNumber);
+console.log(text, typeof text);
+console.log(isTrue, typeof isTrue);
+Output:
+25 number
+3.14 number
+JavaScript string
+true boolean
+
+2)
+let a;
+let b = null;
+
+console.log(a, typeof a);
+console.log(b, typeof b);
+Output:
+undefined undefined
+null object
+
+3)
+let positiveInfinity = Infinity;
+let negativeInfinity = -Infinity;
+let notANumber = NaN;
+let scientific = 2.5e3;
+let readable = 1_000_000;
+
+console.log(positiveInfinity, typeof positiveInfinity);
+console.log(negativeInfinity, typeof negativeInfinity);
+console.log(notANumber, typeof notANumber);
+console.log(scientific, typeof scientific);
+console.log(readable, typeof readable);
+Output:
+Infinity number
+-Infinity number
+NaN number
+2500 number
+1000000 number
+
+4)
+let singleQuote = 'Hello';
+let doubleQuote = "World";
+let userName = "Vikas";
+let templateString = `Welcome ${userName}`;
+
+console.log(singleQuote);
+console.log(doubleQuote);
+console.log(templateString);
+Output:
+Hello
+World
+Welcome Vikas
+
+F]
+
+5)
+let sym1 = Symbol("id");
+let sym2 = Symbol("id");
+
+console.log(sym1 === sym2);
+
+let obj = {
+  [sym1]: "First value",
+  [sym2]: "Second value"
+};
+
+console.log(obj[sym1]);
+console.log(obj[sym2]);
+Output:
+false
+First value
+Second value
+
+6)
+let num = Number.MAX_SAFE_INTEGER;
+
+console.log(num + 1);
+console.log(num + 2);
+console.log(num + 3);
+
+let big = 9007199254740991n;
+
+console.log(big + 1n);
+console.log(big + 2n);
+console.log(big + 3n);
+Output:
+9007199254740992
+9007199254740992
+9007199254740994
+9007199254740992n
+9007199254740993n
+9007199254740994n
+
+7)
+let uniqueId = Symbol("id");
+let bigValue = 9007199254740991n;
+let notGiven;
+let emptyValue = null;
+
+console.log(typeof uniqueId, typeof bigValue, typeof notGiven, typeof emptyValue);
+Output:
+symbol bigint undefined object
+
+G]
+
+8)
+let a;
+let b = null;
+let c = 42;
+let d = "Hello";
+let e = true;
+let f = Symbol("key");
+let g = 123n;
+
+console.log(typeof a, a);
+console.log(typeof b, b);
+console.log(typeof c, c);
+console.log(typeof d, d);
+console.log(typeof e, e);
+console.log(typeof f, f);
+console.log(typeof g, g);
+Output:
+undefined undefined
+object null
+number 42
+string Hello
+boolean true
+symbol Symbol(key)
+bigint 123n
+
+9)
+let num = 10;
+let text = "Hello";
+let flag = true;
+let empty;
+let nothing = null;
+let unique = Symbol("id");
+let big = 9007199254740991n;
+
+console.log(num, text, flag, empty, nothing, unique, big);
+Output:
+10 Hello true undefined null Symbol(id) 9007199254740991n
+
+10)
+let age = 20;
+let student = {
+  name: "Vikas",
+  age: 18
+};
+
+console.log(age, student);
+Output:
+20 { name: 'Vikas', age: 18 }
+
+a) Primitive types hold one simple value and are copied by value. Non-primitive types hold many values and are copied by reference.
+b) They are called primitive because they are the most basic values, they are not objects and they cannot be changed.
+c) Object, for example student = { name: "Vikas", age: 18 }. It is non-primitive because it holds many values together and is stored by reference.
+
+H]
+
+1)
+let student = {
+  name: "Riya",
+  age: 18,
+  isEnrolled: true
+};
+
+console.log(student);
+console.log(student.name);
+console.log(student.age);
+console.log(student.isEnrolled);
+Output:
+{ name: 'Riya', age: 18, isEnrolled: true }
+Riya
+18
+true
+
+2)
+let scores = [85, 92, 78, 90];
+let mixedData = [10, "Hello", true, null];
+
+console.log(scores);
+console.log(mixedData);
+console.log(scores[0]);
+console.log(scores[scores.length - 1]);
+Output:
+[ 85, 92, 78, 90 ]
+[ 10, 'Hello', true, null ]
+85
+90
+
+3)
+function calculateArea(length, width) {
+  return length * width;
 }
 
-{
-  let a;
-  let b = null;
+console.log(calculateArea(5, 4));
+console.log(calculateArea(10, 3));
+Output:
+20
+30
 
-  console.log(a, typeof a);
-  console.log(b, typeof b);
+4)
+let num = 10;
+let str = "Hello";
+let bool = true;
+let nothing = null;
+let obj = { name: "Vikas" };
+let arr = [1, 2, 3];
+
+function sayHi() {
+  return "Hi!";
 }
 
-{
-  let positiveInfinity = Infinity;
-  let negativeInfinity = -Infinity;
-  let notANumber = NaN;
-  let scientific = 2.5e3;
-  let readable = 1_000_000;
+console.log(num, typeof num);
+console.log(str, typeof str);
+console.log(bool, typeof bool);
+console.log(nothing, typeof nothing);
+console.log(obj, typeof obj);
+console.log(arr, typeof arr);
+console.log(sayHi, typeof sayHi);
+Output:
+10 number
+Hello string
+true boolean
+null object
+{ name: 'Vikas' } object
+[ 1, 2, 3 ] object
+[Function: sayHi] function
 
-  console.log(positiveInfinity, typeof positiveInfinity);
-  console.log(negativeInfinity, typeof negativeInfinity);
-  console.log(notANumber, typeof notANumber);
-  console.log(scientific, typeof scientific);
-  console.log(readable, typeof readable);
+I]
+
+5)
+let userName = "Vikas";
+let _privateData = 1;
+let $price = 99;
+let totalCount = 5;
+
+console.log(userName, _privateData, $price, totalCount);
+Output:
+Vikas 1 99 5
+
+Valid: userName, _privateData, $price, totalCount
+Invalid: 2ndPlace (starts with a number), my-age (hyphen not allowed), function (reserved word), const (reserved word)
+
+6)
+const length = 10;
+const width = 5;
+const area = length * width;
+const MAX_LIMIT = 100;
+
+console.log(length, width, area, MAX_LIMIT);
+Output:
+10 5 50 100
+
+7)
+let city;
+city = "Delhi";
+
+let age = 20;
+const PI = 3.14;
+
+console.log(city);
+console.log(age);
+console.log(PI);
+Output:
+Delhi
+20
+3.14
+
+J]
+
+8)
+let person = {
+  name: "Vikas",
+  age: 22
+};
+
+let colors = ["red", "green", "blue"];
+
+function sayHi() {
+  return "Hi!";
 }
 
-{
-  let singleQuote = 'Hello';
-  let doubleQuote = "World";
-  let userName = "Vikas";
-  let templateString = `Welcome ${userName}`;
+let empty = null;
 
-  console.log(singleQuote);
-  console.log(doubleQuote);
-  console.log(templateString);
+console.log(typeof person);
+console.log(typeof colors);
+console.log(typeof sayHi);
+console.log(typeof empty);
+console.log(person.name);
+console.log(colors[1]);
+console.log(sayHi());
+Output:
+object
+object
+function
+object
+Vikas
+green
+Hi!
+
+9)
+let student1 = {
+  name: "Vikas",
+  age: 19
+};
+
+let scores = [90, 85, 88];
+
+function greet(name) {
+  return "Hello " + name;
 }
 
-{
-  let sym1 = Symbol("id");
-  let sym2 = Symbol("id");
+let maxScore = 100;
+maxScore = 95;
 
-  console.log(sym1 === sym2);
+console.log(student1.name);
+console.log(scores[0]);
+console.log(greet("Vikas"));
+console.log(maxScore);
+Output:
+Vikas
+90
+Hello Vikas
+95
 
-  let obj = {
-    [sym1]: "First value",
-    [sym2]: "Second value"
-  };
+10)
+let personObj = {
+  name: "Vikas"
+};
 
-  console.log(obj[sym1]);
-  console.log(obj[sym2]);
-}
+let colorsArr = ["red", "green"];
 
-{
-  let num = Number.MAX_SAFE_INTEGER;
+console.log(personObj.name);
+console.log(colorsArr[0]);
+console.log(typeof null);
 
-  console.log(num + 1);
-  console.log(num + 2);
-  console.log(num + 3);
+let marks = [85, 92, 78, 90];
+console.log(marks);
 
-  let big = 9007199254740991n;
+const PI = 3.14;
+let score = 50;
+score = 80;
 
-  console.log(big + 1n);
-  console.log(big + 2n);
-  console.log(big + 3n);
-}
+console.log(PI, score);
+Output:
+Vikas
+red
+object
+[ 85, 92, 78, 90 ]
+3.14 80
 
-{
-  let uniqueId = Symbol("id");
-  let bigValue = 9007199254740991n;
-  let notGiven;
-  let emptyValue = null;
-
-  console.log(typeof uniqueId, typeof bigValue, typeof notGiven, typeof emptyValue);
-}
-
-{
-  let a;
-  let b = null;
-  let c = 42;
-  let d = "Hello";
-  let e = true;
-  let f = Symbol("key");
-  let g = 123n;
-
-  console.log(typeof a, a);
-  console.log(typeof b, b);
-  console.log(typeof c, c);
-  console.log(typeof d, d);
-  console.log(typeof e, e);
-  console.log(typeof f, f);
-  console.log(typeof g, g);
-}
-
-{
-  let num = 10;
-  let text = "Hello";
-  let flag = true;
-  let empty;
-  let nothing = null;
-  let unique = Symbol("id");
-  let big = 9007199254740991n;
-
-  console.log(num, text, flag, empty, nothing, unique, big);
-}
-
-{
-  let age = 20;
-  let student = {
-    name: "Riya",
-    age: 18
-  };
-
-  console.log(age, student);
-}
-
-{
-  let student = {
-    name: "Riya",
-    age: 18,
-    isEnrolled: true
-  };
-
-  console.log(student);
-  console.log(student.name);
-  console.log(student.age);
-  console.log(student.isEnrolled);
-}
-
-{
-  let scores = [85, 92, 78, 90];
-  let mixedData = [10, "Hello", true, null];
-
-  console.log(scores);
-  console.log(mixedData);
-  console.log(scores[0]);
-  console.log(scores[scores.length - 1]);
-}
-
-{
-  function calculateArea(length, width) {
-    return length * width;
-  }
-
-  console.log(calculateArea(5, 4));
-  console.log(calculateArea(10, 3));
-}
-
-{
-  let num = 10;
-  let str = "Hello";
-  let bool = true;
-  let nothing = null;
-  let obj = { name: "Riya" };
-  let arr = [1, 2, 3];
-
-  function sayHi() {
-    return "Hi!";
-  }
-
-  console.log(num, typeof num);
-  console.log(str, typeof str);
-  console.log(bool, typeof bool);
-  console.log(nothing, typeof nothing);
-  console.log(obj, typeof obj);
-  console.log(arr, typeof arr);
-  console.log(sayHi, typeof sayHi);
-}
-
-{
-  let userName = "Amit";
-  let _privateData = 1;
-  let $price = 99;
-  let totalCount = 5;
-
-  console.log(userName, _privateData, $price, totalCount);
-}
-
-{
-  const length = 10;
-  const width = 5;
-  const area = length * width;
-  const MAX_LIMIT = 100;
-
-  console.log(length, width, area, MAX_LIMIT);
-}
-
-{
-  let city;
-  city = "Delhi";
-
-  let age = 20;
-  const PI = 3.14;
-
-  console.log(city);
-  console.log(age);
-  console.log(PI);
-}
-
-{
-  let person = {
-    name: "Amit",
-    age: 22
-  };
-
-  let colors = ["red", "green", "blue"];
-
-  function sayHi() {
-    return "Hi!";
-  }
-
-  let empty = null;
-
-  console.log(typeof person);
-  console.log(typeof colors);
-  console.log(typeof sayHi);
-  console.log(typeof empty);
-  console.log(person.name);
-  console.log(colors[1]);
-  console.log(sayHi());
-}
-
-{
-  let student1 = {
-    name: "Neha",
-    age: 19
-  };
-
-  let scores = [90, 85, 88];
-
-  function greet(name) {
-    return "Hello " + name;
-  }
-
-  let maxScore = 100;
-  maxScore = 95;
-
-  console.log(student1.name);
-  console.log(scores[0]);
-  console.log(greet("Neha"));
-  console.log(maxScore);
-}
-
-{
-  let personObj = {
-    name: "Amit"
-  };
-
-  let colorsArr = ["red", "green"];
-
-  console.log(personObj.name);
-  console.log(colorsArr[0]);
-  console.log(typeof null);
-
-  let marks = [85, 92, 78, 90];
-  console.log(marks);
-
-  const PI = 3.14;
-  let score = 50;
-  score = 80;
-
-  console.log(PI, score);
-}
+a) An object stores data with names (keys), like name and age. An array stores data in order using index numbers like 0, 1, 2.
+b) It is an old mistake from the first version of JavaScript. null is not really an object, it is a primitive value.
+c) It keeps the data simple and the same kind, so loops and calculations work without surprises.
+d) Use const when the value will not change, use let when the value will change.
