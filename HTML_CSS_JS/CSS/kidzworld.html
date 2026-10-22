@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidz World</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 12px 80px;
+}
+
+nav img.logo {
+    height: 22px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.cart img {
+    height: 22px;
+}
+
+.hero {
+    background: #ff4164;
+    background-image: url("assets/kw-background.png");
+    background-position: right bottom;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 0 80px;
+}
+
+.content h1 {
+    font-family: Georgia, serif;
+    font-size: 60px;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.content h4 {
+    font-size: 16px;
+    margin: 12px 0 0;
+}
+
+section {
+    padding: 50px 80px 40px;
+}
+
+section h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 18px;
+    margin: 0 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.card {
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+.thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.thumb img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.thumb.yellow {
+    background: #ffc72c;
+    border: none;
+}
+
+.card h3 {
+    font-size: 13px;
+    margin: 8px 0 2px;
+}
+
+.card p {
+    font-size: 11px;
+    color: #777;
+    margin: 0;
+    min-height: 14px;
+}
+
+.buy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.price {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.add {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background: #5b8ef5;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 4px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.add img {
+    height: 12px;
+}
+
+.games .card {
+    width: 200px;
+}
+
+.games .thumb {
+    height: 150px;
+}
+
+.handmade .card {
+    width: 200px;
+}
+
+@media (max-width: 700px) {
+    nav {
+        padding: 12px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+        padding: 40px 20px 0;
+        background-size: 100% auto;
+        background-position: center bottom;
+        min-height: 0;
+    }
+
+    .content h1 {
+        font-size: 35px;
+    }
+
+    section {
+        padding: 30px 20px;
+    }
+
+    .row {
+        justify-content: center;
+    }
+
+    .card,
+    .games .card,
+    .handmade .card {
+        width: 45%;
+    }
+
+    .games .thumb {
+        height: 130px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img class="logo" src="assets/kw-logo.png" alt="Kidz World">
+        <div class="cart">
+            <img src="assets/cart-icon.png" alt="Cart">
+            <span>Cart items (0)</span>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="content">
+            <h1>Shop.<br>
+                Have Fun.<br>
+                Repeat.
+            </h1>
+            <h4>#NewAndNow</h4>
+        </div>
+    </section>
+
+    <section class="books">
+        <h2>Discover New Books</h2>
+        <div class="row">
+            <div class="card">
+                <div class="thumb"><img src="assets/book1.png" alt="This was our pact"></div>
+                <h3>This was our pact</h3>
+                <p>Ryan Andrews</p>
+                <div class="buy"><span class="price">$7.49</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb"><img src="assets/book2.png" alt="The famous five"></div>
+                <h3>The famous five</h3>
+                <p>Enid Blyton</p>
+                <div class="buy"><span class="price">$4.59</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb"><img src="assets/book3.png" alt="Matilda"></div>
+                <h3>Matilda</h3>
+                <p>Roald Dahl</p>
+                <div class="buy"><span class="price">$6.80</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb"><img src="assets/book4.png" alt="Harry Potter"></div>
+                <h3>Harry Potter</h3>
+                <p>JK Rowling</p>
+                <div class="buy"><span class="price">$10</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb"><img src="assets/book5.png" alt="For Young Readers"></div>
+                <h3>For Young Readers</h3>
+                <p>Ruskin Bond</p>
+                <div class="buy"><span class="price">$7.29</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb"><img src="assets/book6.png" alt="Wimpy Kid - DIY"></div>
+                <h3>Wimpy Kid - DIY</h3>
+                <p>Jeff Kinney</p>
+                <div class="buy"><span class="price">$4.99</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="games">
+        <h2>Discover New Games</h2>
+        <div class="row">
+            <div class="card">
+                <div class="thumb yellow"><img src="assets/dart-board.png" alt="Dart Board"></div>
+                <h3>Dart Board</h3>
+                <p>Wooden board, 16 inches</p>
+                <div class="buy"><span class="price">$17.49</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb yellow"><img src="assets/connect-four.png" alt="Connect 4"></div>
+                <h3>Connect 4</h3>
+                <p>Board game, multiplayer</p>
+                <div class="buy"><span class="price">$19.99</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb yellow"><img src="assets/jenga.png" alt="Jenga"></div>
+                <h3>Jenga</h3>
+                <p>Wooden blocks, 54 pieces</p>
+                <div class="buy"><span class="price">$20.99</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb yellow"><img src="assets/monopoly.png" alt="Monopoly"></div>
+                <h3>Monopoly</h3>
+                <p>1.61 x 15.75 x 10.51 inches</p>
+                <div class="buy"><span class="price">$19.49</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="handmade">
+        <h2>Handmade with love</h2>
+        <div class="row">
+            <div class="card">
+                <div class="thumb"><img src="assets/bookmarks.png" alt="Bookmarks"></div>
+                <h3>Bookmarks</h3>
+                <p>Handmade with love</p>
+                <div class="buy"><span class="price">$12.49</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb"><img src="assets/birthday-card.png" alt="Birthday card"></div>
+                <h3>Birthday card</h3>
+                <p>Handmade with love</p>
+                <div class="buy"><span class="price">$19.99</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb"><img src="assets/stuffed-toy.png" alt="Stuffed toys"></div>
+                <h3>Stuffed toys</h3>
+                <p>Handmade with love</p>
+                <div class="buy"><span class="price">$15.99</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+            <div class="card">
+                <div class="thumb"><img src="assets/dream-catcher.png" alt="Dream catcher drawing"></div>
+                <h3>Dream catcher drawing</h3>
+                <p>Handmade with love</p>
+                <div class="buy"><span class="price">$18.49</span><button class="add">Add <img src="assets/cart-icon-white.png" alt=""></button></div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
