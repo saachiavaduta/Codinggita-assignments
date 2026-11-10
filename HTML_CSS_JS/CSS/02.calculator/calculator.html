@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fde4ee;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    width: 320px;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #1c1c1e;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(214, 51, 132, 0.35);
+}
+
+.display {
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    color: white;
+    font-size: 64px;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+button {
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    background: #4a4a4c;
+    color: white;
+}
+
+button.light {
+    background: #a5a5a7;
+    color: #1c1c1e;
+}
+
+button.pink {
+    background: #ff4fa3;
+    color: white;
+}
+
+button.wide {
+    width: 132px;
+    border-radius: 30px;
+    text-align: left;
+    padding-left: 24px;
+    box-sizing: border-box;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 90%;
+    }
+
+    .buttons {
+        gap: 8px;
+    }
+
+    button {
+        width: 22%;
+        height: 60px;
+    }
+
+    button.wide {
+        width: 47%;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <div class="display">0</div>
+        <div class="buttons">
+            <button class="light">C</button>
+            <button class="light">+/-</button>
+            <button class="light">%</button>
+            <button class="pink">÷</button>
+
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button class="pink">×</button>
+
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button class="pink">-</button>
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button class="pink">+</button>
+
+            <button class="wide">0</button>
+            <button>.</button>
+            <button class="pink">=</button>
+        </div>
+    </div>
+
+</body>
+</html>

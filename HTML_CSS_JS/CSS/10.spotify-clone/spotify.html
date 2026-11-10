@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .app-body {
+      display: flex;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #000000;
+      padding: 24px 8px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+    }
+
+    .logo {
+      width: 140px;
+      margin-left: 16px;
+      margin-bottom: 24px;
+    }
+
+    .sidebar-menu,
+    .sidebar-library {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .sidebar-library {
+      margin-top: 24px;
+    }
+
+    .sidebar-menu li,
+    .sidebar-library li {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .sidebar-menu li.active {
+      background-color: #1f1f1f;
+    }
+
+    .menu-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .create-icon {
+      width: 24px;
+      height: 24px;
+      background-color: #ffffff;
+    }
+
+    .liked-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .playlist-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 16px 16px 0 16px;
+      margin-top: 16px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #b3b3b3;
+    }
+
+    .install-app {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .install-icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .main {
+      flex: 1;
+      background: linear-gradient(180deg, #2a2a2a 0%, #121212 350px);
+      overflow-y: auto;
+      padding: 0 32px 32px 32px;
+    }
+
+    .top-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+    }
+
+    .nav-arrows {
+      width: 84px;
+    }
+
+    .user-menu {
+      height: 40px;
+    }
+
+    .greeting {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 24px;
+    }
+
+    .quick-picks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .quick-card {
+      flex: 0 0 calc(25% - 15px);
+      display: flex;
+      align-items: center;
+      background-color: #2a2a2a;
+      border-radius: 4px;
+      overflow: hidden;
+      height: 80px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .quick-card img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 16px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-size: 24px;
+    }
+
+    .see-all {
+      font-size: 12px;
+      letter-spacing: 1px;
+      color: #b3b3b3;
+    }
+
+    .shows {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .show-card {
+      flex: 0 0 calc((100% - 120px) / 6);
+      background-color: #181818;
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .show-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 16px;
+    }
+
+    .show-card h3 {
+      font-size: 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 6px;
+    }
+
+    .show-card p {
+      font-size: 14px;
+      color: #b3b3b3;
+    }
+
+    .player {
+      height: 90px;
+      background-color: #181818;
+      border-top: 1px solid #282828;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+    }
+
+    .now-playing {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .now-playing img.thumb {
+      width: 56px;
+      height: 56px;
+      border-radius: 4px;
+    }
+
+    .song-name {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .artist-name {
+      font-size: 12px;
+      color: #b3b3b3;
+    }
+
+    .like-icon {
+      width: 18px;
+      margin-left: 8px;
+    }
+
+    .player-controls {
+      width: 40%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .player-controls img {
+      width: 100%;
+      display: block;
+    }
+
+    .play-button {
+      position: absolute;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+      color: #000000;
+    }
+
+    .player-right {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .player-right img {
+      width: 220px;
+    }
+
+    .device-bar {
+      height: 26px;
+      background-color: #1ed760;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 16px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 1100px) {
+      .quick-card {
+        flex: 0 0 calc(50% - 10px);
+      }
+
+      .show-card {
+        flex: 0 0 calc((100% - 48px) / 3);
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        height: auto;
+        min-height: 100vh;
+      }
+
+      .app-body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        padding: 16px;
+      }
+
+      .logo {
+        margin-bottom: 12px;
+      }
+
+      .sidebar-library {
+        margin-top: 12px;
+      }
+
+      .playlist-list,
+      .install-app {
+        display: none;
+      }
+
+      .main {
+        padding: 0 16px 24px 16px;
+      }
+
+      .quick-card {
+        flex: 0 0 100%;
+      }
+
+      .show-card {
+        flex: 0 0 calc((100% - 24px) / 2);
+      }
+
+      .player {
+        height: auto;
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px 16px;
+      }
+
+      .now-playing,
+      .player-controls,
+      .player-right {
+        width: 100%;
+      }
+
+      .player-right {
+        justify-content: center;
+      }
+
+      .player-right img {
+        width: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-body">
+
+    <aside class="sidebar">
+      <img src="assets/Spotify%20logo.png" alt="Spotify" class="logo">
+
+      <ul class="sidebar-menu">
+        <li class="active">
+          <img src="assets/Home.png" alt="" class="menu-icon">
+          <span>Home</span>
+        </li>
+        <li>
+          <img src="assets/Search.png" alt="" class="menu-icon">
+          <span>Search</span>
+        </li>
+        <li>
+          <img src="assets/Your%20library.png" alt="" class="menu-icon">
+          <span>Your Library</span>
+        </li>
+      </ul>
+
+      <ul class="sidebar-library">
+        <li>
+          <img src="assets/Create.png" alt="" class="create-icon">
+          <span>Create Playlist</span>
+        </li>
+        <li>
+          <img src="assets/Liked.png" alt="" class="liked-icon">
+          <span>Liked Songs</span>
+        </li>
+        <li>
+          <img src="assets/your%20episodes.png" alt="" class="liked-icon">
+          <span>Your Episodes</span>
+        </li>
+      </ul>
+
+      <ul class="playlist-list">
+        <li>FAV</li>
+        <li>Daily Mix 1</li>
+        <li>Discover Weekly</li>
+        <li>Malayalam</li>
+        <li>Dance / Electronix Mix</li>
+        <li>EDM / Popular</li>
+      </ul>
+
+      <a href="#" class="install-app">
+        <img src="assets/grommet-icons_install-option.png" alt="" class="install-icon">
+        <span>Install App</span>
+      </a>
+    </aside>
+
+    <main class="main">
+
+      <div class="top-nav">
+        <img src="assets/top%20arrow%20navigation.png" alt="Back and forward" class="nav-arrows">
+        <img src="assets/User.png" alt="Angel profile" class="user-menu">
+      </div>
+
+      <h1 class="greeting">Good morning</h1>
+
+      <section class="quick-picks">
+        <div class="quick-card">
+          <img src="assets/Liked.png" alt="Liked Songs">
+          <span>Liked Songs</span>
+        </div>
+        <div class="quick-card">
+          <img src="assets/image4.png" alt="Neffex Playlist">
+          <span>Neffex Playlist</span>
+        </div>
+        <div class="quick-card">
+          <img src="assets/image3.png" alt="K/DA">
+          <span>K/ DA</span>
+        </div>
+        <div class="quick-card">
+          <img src="assets/image1.png" alt="Liked Songs">
+          <span>Liked Songs</span>
+        </div>
+        <div class="quick-card">
+          <img src="assets/image2.png" alt="Dance Electronic Mix">
+          <span>Dance / Electronic Mix</span>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-header">
+          <h2>Shows you might like</h2>
+          <a href="#" class="see-all">SEE ALL</a>
+        </div>
+
+        <div class="shows">
+          <div class="show-card">
+            <img src="assets/image9.png" alt="Weekly Motivation">
+            <h3>Weekly Motivation</h3>
+            <p>Ben Ina Scott</p>
+          </div>
+          <div class="show-card">
+            <img src="assets/image8.png" alt="Meditation Self">
+            <h3>MEDITATION SELF</h3>
+            <p>Jhp Hussain Aleen</p>
+          </div>
+          <div class="show-card">
+            <img src="assets/image7.png" alt="Words beyond actions">
+            <h3>Words beyond actions</h3>
+            <p>Samuel Scott</p>
+          </div>
+          <div class="show-card">
+            <img src="assets/image6.png" alt="The Alexa Show">
+            <h3>The Alexa Show</h3>
+            <p>Adriana Tom</p>
+          </div>
+          <div class="show-card">
+            <img src="assets/image5.png" alt="The Stories of Ma">
+            <h3>The Stories of Ma</h3>
+            <p>Lexus</p>
+          </div>
+          <div class="show-card">
+            <img src="assets/image10.png" alt="Motivation Daily">
+            <h3>Motivation Daily</h3>
+            <p>Georgina Martha</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="player">
+    <div class="now-playing">
+      <img src="assets/image11.png" alt="Dreaming On cover" class="thumb">
+      <div>
+        <p class="song-name">Dreaming On</p>
+        <p class="artist-name">NEFFEX</p>
+      </div>
+      <img src="assets/bx_bxs-heart.png" alt="Liked" class="like-icon">
+    </div>
+
+    <div class="player-controls">
+      <img src="assets/Music%20Player%20Options.png" alt="Shuffle, previous, next, repeat and progress bar">
+      <button class="play-button">&#9654;</button>
+    </div>
+
+    <div class="player-right">
+      <img src="assets/Right%20options.png" alt="Player options">
+    </div>
+  </footer>
+
+  <div class="device-bar">
+    Listening on ASUS-ROG-G531GT
+  </div>
+
+</body>
+</html>

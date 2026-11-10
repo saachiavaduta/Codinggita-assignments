@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Clone</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f0f0f;
+      color: #f1f1f1;
+    }
+
+    img {
+      display: block;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px;
+      background: #0f0f0f;
+      z-index: 10;
+    }
+
+    .header-left,
+    .header-right,
+    .search-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .search-area {
+      flex: 1;
+      justify-content: center;
+      padding: 0 16px;
+    }
+
+    .logo img {
+      height: 22px;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .avatar-top {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+
+    .search-box {
+      display: flex;
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .search-box input,
+    .search-box button {
+      height: 40px;
+      border: 1px solid #303030;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 0 16px;
+      background: #121212;
+      color: #f1f1f1;
+      border-radius: 40px 0 0 40px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .search-box button {
+      width: 64px;
+      background: #222222;
+      border-radius: 0 40px 40px 0;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-box button img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 56px;
+      left: 0;
+      width: 240px;
+      height: calc(100vh - 56px);
+      overflow-y: auto;
+      padding: 12px 0;
+      background: #0f0f0f;
+      scrollbar-width: none;
+    }
+
+    .sidebar hr {
+      border: none;
+      border-top: 1px solid #303030;
+      margin: 12px 0;
+    }
+
+    .sidebar h4 {
+      margin: 12px 32px;
+      font-size: 16px;
+    }
+
+    .side-item,
+    .sub-item {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+      margin: 0 12px;
+    }
+
+    .side-item {
+      gap: 24px;
+      height: 40px;
+      border-radius: 10px;
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .side-item:hover,
+    .side-item.active {
+      background: #272727;
+    }
+
+    .side-item img {
+      width: 22px;
+      height: 22px;
+    }
+
+    .sub-item {
+      gap: 16px;
+      height: 36px;
+      font-size: 14px;
+    }
+
+    .sub-item img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    .main {
+      margin-left: 240px;
+      padding-top: 56px;
+    }
+
+    .chips {
+      display: flex;
+      gap: 12px;
+      padding: 12px 24px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .chip {
+      flex-shrink: 0;
+      height: 32px;
+      padding: 0 12px;
+      background: #272727;
+      border: none;
+      border-radius: 8px;
+      color: #f1f1f1;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .chip.active {
+      background: #f1f1f1;
+      color: #0f0f0f;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px 16px;
+      padding: 24px;
+    }
+
+    .thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .video-info {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .avatar {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+    }
+
+    .title {
+      margin: 0 0 6px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .channel,
+    .views {
+      margin: 2px 0;
+      color: #aaaaaa;
+      font-size: 14px;
+    }
+
+    .verified {
+      width: 14px;
+      height: 14px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 1199px) {
+      .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 899px) {
+      .sidebar {
+        display: none;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 599px) {
+      .hide-phone {
+        display: none;
+      }
+
+      .video-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+      }
+
+      .chips {
+        padding: 12px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <img class="icon" src="08.youtube-clone/assets/hambarger.png" alt="Menu">
+      <a class="logo" href="#">
+        <img src="08.youtube-clone/assets/Youtube%20logo.png" alt="YouTube">
+      </a>
+    </div>
+
+    <div class="search-area">
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <button type="button" aria-label="Search">
+          <img src="08.youtube-clone/assets/search.png" alt="">
+        </button>
+      </div>
+      <img class="icon hide-phone" src="08.youtube-clone/assets/mic.png" alt="Voice search">
+    </div>
+
+    <div class="header-right">
+      <img class="icon hide-phone" src="08.youtube-clone/assets/create.png" alt="Create">
+      <img class="icon" src="08.youtube-clone/assets/bell.png" alt="Notifications">
+      <img class="avatar-top" src="08.youtube-clone/assets/Ellipse%201%20(2).png" alt="Your profile">
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <a class="side-item active" href="#"><img src="08.youtube-clone/assets/home.png" alt="">Home</a>
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/explore.png" alt="">Explores</a>
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/shorts.png" alt="">Shorts</a>
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/subscription.png" alt="">Subscriptions</a>
+
+    <hr>
+
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/library.png" alt="">Library</a>
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/history.png" alt="">History</a>
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/your_video.png" alt="">Your videos</a>
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/watch_later.png" alt="">Watch later</a>
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/liked.png" alt="">Liked videos</a>
+    <a class="side-item" href="#"><img src="08.youtube-clone/assets/down_arrow.png" alt="">Show more</a>
+
+    <hr>
+
+    <h4>Subscriptions</h4>
+    <a class="sub-item" href="#"><img src="08.youtube-clone/assets/Ellipse%201.png" alt="">Nadir On The Go</a>
+    <a class="sub-item" href="#"><img src="08.youtube-clone/assets/Ellipse%201%20(1).png" alt="">Coke Studio Bangla</a>
+    <a class="sub-item" href="#"><img src="08.youtube-clone/assets/Ellipse%204%20(2).png" alt="">ATC Android ToTo</a>
+    <a class="sub-item" href="#"><img src="08.youtube-clone/assets/Ellipse%204%20(3).png" alt="">Saptarshi Prakash</a>
+  </aside>
+
+  <main class="main">
+    <div class="chips">
+      <button class="chip active">All</button>
+      <button class="chip">Cook Studio</button>
+      <button class="chip">UX</button>
+      <button class="chip">Case Study</button>
+      <button class="chip">Music</button>
+      <button class="chip">Bnagla Lofi</button>
+      <button class="chip">Tour</button>
+      <button class="chip">Saintmartin</button>
+      <button class="chip">Tech</button>
+      <button class="chip">iPhone 13</button>
+      <button class="chip">User Interface Design</button>
+      <button class="chip">Computer</button>
+    </div>
+
+    <section class="video-grid">
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-8.png" alt="Bulbuli video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%201%20(1).png" alt="">
+          <div>
+            <h3 class="title">Bulbuli | Coke Studio Bangla | Season One | Ritu Raj X Nandita</h3>
+            <p class="channel">Coke Studio Bangla <img class="verified" src="08.youtube-clone/assets/verified.png" alt=""></p>
+            <p class="views">1.5M views • 2 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-9.png" alt="Infinix Note 12 video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%204%20(2).png" alt="">
+          <div>
+            <h3 class="title">Infinix Note 12 : AMOLED Helio G88 SoC!</h3>
+            <p class="channel">ATC Andriod ToTo Company <img class="verified" src="08.youtube-clone/assets/verified.png" alt=""></p>
+            <p class="views">4.2M views • 2 days ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-10.png" alt="UX design case study video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%204%20(3).png" alt="">
+          <div>
+            <h3 class="title">My first UX Design case study - This got me my first job.</h3>
+            <p class="channel">Saptarshi Prakash</p>
+            <p class="views">4.8K views • 1 years ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-11.png" alt="My Mix video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%204-1.png" alt="">
+          <div>
+            <h3 class="title">My Mix</h3>
+            <p class="channel">Lopamudra Mitra, Anupam Roy, and more</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-4.png" alt="UX Design video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%201%20(3).png" alt="">
+          <div>
+            <h3 class="title">UX Design - What is it? (From AJ &amp; Smart)</h3>
+            <p class="channel">AJ&amp;Smar <img class="verified" src="08.youtube-clone/assets/verified.png" alt=""></p>
+            <p class="views">150K views • 3 years ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-5.png" alt="Mix Mombati video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%204-1.png" alt="">
+          <div>
+            <h3 class="title">Mix - Mombati | Mohon Sharif | Dhakaiya Dose | Mahib Ahsan ft Anika</h3>
+            <p class="channel">Mohon Sharif, Odd Signature, Shayan Chowdhury Arnob, and more</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-6.png" alt="48 visa free video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%201.png" alt="">
+          <div>
+            <h3 class="title">48 Visa Free Countries | Nadir On The Go</h3>
+            <p class="channel">Nadir On The Go</p>
+            <p class="views">1.7M views • 1 years ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-7.png" alt="Figma design tips video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%201%20(2).png" alt="">
+          <div>
+            <h3 class="title">14 Advanced Tips to Design FASTER in Figma</h3>
+            <p class="channel">Mizko <img class="verified" src="08.youtube-clone/assets/verified.png" alt=""></p>
+            <p class="views">53K views • 1 years ago</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail.png" alt="Travel video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%204-1.png" alt="">
+          <div>
+            <h3 class="title">ভারত নাকি আর দেশ?</h3>
+            <p class="channel">Travel Bangla</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-1.png" alt="Tech skills video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%204-1.png" alt="">
+          <div>
+            <h3 class="title">Tech Skills for Designers</h3>
+            <p class="channel">Tech Channel</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-2.png" alt="Google video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%204-1.png" alt="">
+          <div>
+            <h3 class="title">A Day Inside Google</h3>
+            <p class="channel">Tech Channel</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img class="thumb" src="08.youtube-clone/assets/Thumbnail-3.png" alt="Microsoft video">
+        <div class="video-info">
+          <img class="avatar" src="08.youtube-clone/assets/Ellipse%204-1.png" alt="">
+          <div>
+            <h3 class="title">100% Scholarship Story | Microsoft</h3>
+            <p class="channel">Tech Channel</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

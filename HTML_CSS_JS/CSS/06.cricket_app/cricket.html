@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICC World Cup 2011 Scorecard</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
+    background: white url("backgroud.png") no-repeat right bottom;
+    background-size: auto 100%;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 30px 60px 0;
+    gap: 20px;
+}
+
+header img {
+    height: 50px;
+}
+
+.title h1 {
+    font-size: 56px;
+    margin: 0;
+    text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.title h3 {
+    margin: 4px 0 0;
+    font-size: 22px;
+    color: #666;
+    font-weight: normal;
+}
+
+.card {
+    width: 1060px;
+    max-width: calc(100% - 120px);
+    margin: 40px 60px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.row.head-red {
+    background: #f04e37;
+    color: white;
+    font-weight: bold;
+    height: 48px;
+    border-bottom: none;
+}
+
+.row.head {
+    background: #fafafa;
+    height: 40px;
+    font-weight: normal;
+}
+
+.row .name {
+    flex: 2;
+}
+
+.row .name.link {
+    color: #1976d2;
+}
+
+.row .how {
+    flex: 3;
+    color: #888;
+}
+
+.row .num {
+    width: 60px;
+    text-align: center;
+}
+
+.row .sr {
+    width: 90px;
+    text-align: right;
+}
+
+.row.total {
+    height: 52px;
+}
+
+.row.did-not-bat {
+    height: 60px;
+}
+
+.row.did-not-bat .list {
+    color: #1976d2;
+}
+
+.row .spacer {
+    flex: 1;
+}
+
+@media (max-width: 700px) {
+    header {
+        padding: 20px 20px 0;
+    }
+
+    .title h1 {
+        font-size: 34px;
+    }
+
+    .card {
+        margin: 30px 20px;
+        max-width: calc(100% - 40px);
+        overflow-x: auto;
+    }
+
+    .row {
+        min-width: 560px;
+        padding: 0 12px;
+        font-size: 14px;
+    }
+
+    .row .num {
+        width: 44px;
+    }
+
+    .row .sr {
+        width: 70px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="title">
+            <h1>ICC WORLD CUP 2011</h1>
+            <h3>India Vs SriLanka ScoreCard</h3>
+        </div>
+        <img src="logo.jpg" alt="CricPro">
+    </header>
+
+    <div class="card">
+        <div class="row head-red">
+            <span class="name">India Innings</span>
+            <span class="spacer"></span>
+            <span>277- 4 (48.2)</span>
+        </div>
+
+        <div class="row head">
+            <span class="name">Batsman</span>
+            <span class="how"></span>
+            <span class="num">R</span>
+            <span class="num">B</span>
+            <span class="num">4s</span>
+            <span class="num">6s</span>
+            <span class="sr">SR</span>
+        </div>
+
+        <div class="row">
+            <span class="name link">Virender Sehwag</span>
+            <span class="how">lbw b L Malinga</span>
+            <span class="num">0</span>
+            <span class="num">2</span>
+            <span class="num">0</span>
+            <span class="num">0</span>
+            <span class="sr">0.00</span>
+        </div>
+
+        <div class="row">
+            <span class="name link">Sachin Tendulkar</span>
+            <span class="how">c K Sangakkara b L Malinga</span>
+            <span class="num">18</span>
+            <span class="num">14</span>
+            <span class="num">2</span>
+            <span class="num">0</span>
+            <span class="sr">128.57</span>
+        </div>
+
+        <div class="row">
+            <span class="name link">Gautam Gambhir</span>
+            <span class="how">b T Perera</span>
+            <span class="num">97</span>
+            <span class="num">122</span>
+            <span class="num">9</span>
+            <span class="num">0</span>
+            <span class="sr">79.51</span>
+        </div>
+
+        <div class="row">
+            <span class="name link">Virat Kohli</span>
+            <span class="how">c &amp; b T Dilshan</span>
+            <span class="num">35</span>
+            <span class="num">49</span>
+            <span class="num">4</span>
+            <span class="num">0</span>
+            <span class="sr">71.43</span>
+        </div>
+
+        <div class="row">
+            <span class="name link">MS Dhoni (c &amp; wk)</span>
+            <span class="how">not out</span>
+            <span class="num">91</span>
+            <span class="num">79</span>
+            <span class="num">8</span>
+            <span class="num">2</span>
+            <span class="sr">115.19</span>
+        </div>
+
+        <div class="row">
+            <span class="name link">Yuvraj Singh</span>
+            <span class="how">not out</span>
+            <span class="num">21</span>
+            <span class="num">24</span>
+            <span class="num">2</span>
+            <span class="num">0</span>
+            <span class="sr">87.50</span>
+        </div>
+
+        <div class="row total">
+            <span class="name">Extras</span>
+            <span class="how"></span>
+            <span>15 (b 1, lb 6, w 8, nb 0, p 0)</span>
+        </div>
+
+        <div class="row total">
+            <span class="name">Total</span>
+            <span class="how"></span>
+            <span>277 (4 wkts, 48.2 Ov)</span>
+        </div>
+
+        <div class="row did-not-bat">
+            <span class="name">Did not bat</span>
+            <span class="list">Suresh Raina, Harbhajan Singh, Zaheer Khan, Munaf Patel, S Sreesanth</span>
+        </div>
+    </div>
+
+</body>
+</html>

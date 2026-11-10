@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superwars</title>
+    <style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+.game {
+    width: 90%;
+    max-width: 1350px;
+    height: 690px;
+    margin: 40px auto;
+    padding: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.team {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 132px;
+    height: 226px;
+    box-sizing: border-box;
+    padding: 8px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.card h3 {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 6px 0 0;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p {
+    font-size: 40px;
+    margin: auto 0 0;
+}
+
+.score {
+    font-size: 48px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+@media (max-width: 700px) {
+    .top {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .team {
+        gap: 10px;
+    }
+
+    .card {
+        width: 110px;
+        height: 200px;
+    }
+
+    .card img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .card p {
+        font-size: 30px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="game">
+        <div class="top">
+            <div class="team">
+                <div class="card">
+                    <img src="super-1.png" alt="Spiderman">
+                    <h3>Spiderman</h3>
+                    <p>12</p>
+                </div>
+                <div class="card">
+                    <img src="super-3.png" alt="Wonder Women">
+                    <h3>Wonder Women</h3>
+                    <p>30</p>
+                </div>
+            </div>
+
+            <h1 class="score">5 - 0</h1>
+
+            <div class="team">
+                <div class="card">
+                    <img src="super-2.png" alt="Captain America">
+                    <h3>Captain America</h3>
+                    <p>50</p>
+                </div>
+                <div class="card">
+                    <img src="super-4.png" alt="Gem Woman">
+                    <h3>Gem Woman</h3>
+                    <p>12</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
